@@ -1,0 +1,103 @@
+<!doctype html>
+<!-- Adapted from Jon Barron's academic website: https://github.com/jonbarron/jonbarron.github.io -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Junsong Wu">
+  <meta name="description" content="Junsong Wu — research homepage.">
+  <link rel="canonical" href="https://jason-wjs.github.io/">
+  <title>Junsong Wu</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <a class="skip-link" href="#research">Skip to research</a>
+  <main>
+    <header class="intro">
+      <div class="bio">
+        <h1>Junsong Wu <span lang="zh-CN">吴俊松</span></h1>
+        <p>I'm an M.S. student in Mechanical Engineering at Shanghai Jiao Tong University, advised by Prof. <a href="https://ieeexplore.ieee.org/author/37278485900">Zhenhua Xiong</a>. I'm also a research intern at TeleAI, working with <a href="https://baichenjia.cn/">Chenjia Bai</a>. Previously, I completed undergraduate studies in the humanities at SJTU.</p>
+        <p>I aim to build general-purpose intelligence that learns and acts in the physical world. Toward this goal, my research focuses on scaling physical experience through simulation, grounded by real-world interaction. I explore how hardware, simulation, and learning can be co-designed so that physical knowledge accumulates and transfers across tasks, environments, and embodiments.</p>
+        <nav class="contact" aria-label="Contact and profiles">
+          <a href="mailto:jason-w@sjtu.edu.cn">Email</a><span aria-hidden="true">/</span>
+          <a href="https://scholar.google.com/citations?user=RrZ_vZIAAAAJ">Scholar</a><span aria-hidden="true">/</span>
+          <a href="https://github.com/jason-wjs">GitHub</a><span aria-hidden="true">/</span>
+          <a href="https://x.com/wujered">X</a>
+        </nav>
+      </div>
+      <div class="portrait"><img src="assets/portrait-unified.jpg" alt="Junsong Wu in graduation attire, with his hands and graduation cap visible" width="1200" height="1200" fetchpriority="high"></div>
+    </header>
+
+    <section id="research" aria-labelledby="research-heading">
+      <h2 id="research-heading">Research</h2>
+      <div class="papers">
+        <article class="paper">
+          <video class="paper-media" src="assets/papers/ttc.mp4" poster="assets/papers/ttc-poster.jpg" width="640" height="304" autoplay loop muted playsinline preload="metadata" aria-label="Test-time command optimization: sampled commands are rolled out in parallel through a fixed behavior foundation model, scored against the reference, and the best command is executed before replanning"></video>
+          <div class="paper-copy">
+            <h3>Test-Time Compute for Humanoid Behavior Foundation Models</h3>
+            <p class="authors">Weiji Xie<sup>*</sup>, <strong>Junsong Wu</strong><sup>*</sup>, Zibo Zhou, Yueru Chen, Xingyi Wang, Zhenhua Xiong, Weinan Zhang, Chenjia Bai</p>
+            <p class="venue">Under review at ICLR 2027 · <sup>*</sup>Equal contribution</p>
+            <div class="resources"><a href="https://bfmttc.github.io">project page</a><i>/</i><span>arXiv</span><i>/</i><span>code</span></div>
+            <p class="tldr"><strong>TL;DR</strong> Test-time command optimization adjusts the inputs of a frozen humanoid behavior foundation model so the executed motion stays closer to the desired one, without retraining.</p>
+          </div>
+        </article>
+        <article class="paper">
+          <video class="paper-media" src="assets/papers/koda.mp4" poster="assets/papers/koda-poster.jpg" width="640" height="360" autoplay loop muted playsinline preload="metadata" aria-label="KODA: a human egocentric demonstration of putting a cup into a drawer is converted into aligned humanoid motion and robot views, then the real humanoid performs the same task"></video>
+          <div class="paper-copy">
+            <h3>KODA: Kinematics-Observation Data Alignment for Humanoid Learning from Human Egocentric Demonstration</h3>
+            <p class="authors">Zibo Zhou<sup>*</sup>, Yueru Chen<sup>*</sup>, <strong>Junsong Wu</strong>, Weiji Xie, Qingyao Xu, Sheng Yin, Jiyuan Shi, Siheng Chen, Chenjia Bai, Xuelong Li</p>
+            <p class="venue">Under review at RA-L · <sup>*</sup>Equal contribution</p>
+            <div class="resources"><a href="https://koda-humanoid.github.io/koda">project page</a><i>/</i><span>arXiv</span><i>/</i><a href="https://github.com/Gamma-Robot/KODA">code</a></div>
+            <p class="tldr"><strong>TL;DR</strong> KODA aligns human egocentric demonstrations with a humanoid's kinematics and observations, so those demonstrations can be used for learning.</p>
+          </div>
+        </article>
+        <article class="paper">
+          <video class="paper-media" src="assets/papers/nexus.mp4" poster="assets/papers/nexus-poster.jpg" width="576" height="432" autoplay loop muted playsinline preload="metadata" aria-label="NEXUS: an operator moves and squats on flat ground while the humanoid steps and balances on a raised stair platform"></video>
+          <div class="paper-copy">
+            <h3>NEXUS: Perceptive Whole-Body Control for Terrain-Adaptive Teleoperation</h3>
+            <p class="authors">Xiangyu Miao, <strong>Junsong Wu</strong>, Jiyuan Shi, Weiji Xie, Jinrui Han, Xingyi Wang, Weinan Zhang, Chenjia Bai, Xuelong Li</p>
+            <p class="venue">Under review at ICRA 2027</p>
+            <div class="resources"><a href="https://nexus-humanoid.github.io/">project page</a><i>/</i><a href="https://arxiv.org/abs/2609.39000">arXiv</a><i>/</i><span>code</span></div>
+            <p class="tldr"><strong>TL;DR</strong> NEXUS turns flat-ground motions into terrain-consistent references and trains a perceptive whole-body controller for teleoperation across different terrains.</p>
+          </div>
+        </article>
+        <article class="paper">
+          <video class="paper-media" src="assets/papers/echo.mp4" poster="assets/papers/echo-poster.jpg" width="640" height="360" autoplay loop muted playsinline preload="metadata" aria-label="ECHO: a humanoid performs a teleoperated side flip from a raised platform, then kneels and stands up with 2 kg attached to each lower leg"></video>
+          <div class="paper-copy">
+            <h3>ECHO: In-Context Behavior Foundation Model for Humanoid Whole-Body Control</h3>
+            <p class="authors">Xingyi Wang, Bin Li, Jiyuan Shi, Chenyun Zhang, Weiji Xie, Xiangyu Miao, <strong>Junsong Wu</strong>, Wei Song, Shiqiang Zhu, Chenjia Bai</p>
+            <p class="venue">Under review at ICLR 2027</p>
+            <div class="resources" aria-label="Resources not yet available"><span>project page</span><i>/</i><span>arXiv</span><i>/</i><span>code</span></div>
+            <p class="tldr"><strong>TL;DR</strong> ECHO learns an in-context behavior foundation model that prompts one whole-body controller for many behaviors.</p>
+          </div>
+        </article>
+        <article class="paper">
+          <video class="paper-media" src="assets/papers/clot.mp4" poster="assets/papers/clot-poster.jpg" width="640" height="360" autoplay loop muted playsinline preload="metadata" aria-label="CLOT: a teleoperated humanoid picks up a bucket from the ground, carries it alongside the operator, and places it on a table"></video>
+          <div class="paper-copy">
+            <h3>CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation</h3>
+            <p class="authors">Tengjie Zhu<sup>*</sup>, Guanyu Cai<sup>*</sup>, Zhaohui Yang<sup>*</sup>, Guanzhu Ren, Haohui Xie, <strong>Junsong Wu</strong>, ZiRui Wang, Jingbo Wang, Xiaokang Yang, Yao Mu, Yichao Yan</p>
+            <p class="venue">Under review at ICRA 2027 · <sup>*</sup>Equal contribution</p>
+            <div class="resources"><a href="https://zhutengjie.github.io/CLOT.github.io/">project page</a><i>/</i><a href="https://arxiv.org/abs/2602.15060">arXiv</a><i>/</i><a href="https://github.com/zhutengjie/CLOT">code</a></div>
+            <p class="tldr"><strong>TL;DR</strong> CLOT closes the loop on whole-body humanoid teleoperation, correcting global position and heading during long-horizon tracking.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="beyond" aria-labelledby="beyond-heading">
+      <h2 id="beyond-heading">Miscellaneous</h2>
+      <p>Beyond research, music has long been a big part of my life. I have spent countless hours somewhere between rehearsals and the stage, playing guitar with my bands. I also remain deeply interested in the humanities, especially language learning, literature, philosophy, and history.</p>
+    </section>
+    <figure class="epigraph">
+      <blockquote><p>Wealthy with all you’ve gained on the way.</p></blockquote>
+      <figcaption>— C. P. Cavafy, <cite>Ithaka</cite></figcaption>
+    </figure>
+    <footer>Website adapted from <a href="https://jonbarron.info/">Jon Barron</a>'s <a href="https://github.com/jonbarron/jonbarron.github.io">template</a>.</footer>
+  </main>
+  <script>
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('video[autoplay]').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
+    }
+  </script>
+</body>
+</html>
