@@ -15,6 +15,16 @@ h1 span{display:inline-block;font-family:'Songti SC','Noto Serif CJK SC',serif;f
 .placeholder{color:var(--muted)}
 .contact{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:5px 9px;margin-top:20px;font-size:15px}
 .contact>span{color:#919191}
+.contact button{padding:0;border:0;background:none;color:var(--link);font:inherit;cursor:pointer}
+.contact button:hover{color:#af5c00}
+.contact button:focus-visible,.wechat-close:focus-visible{outline:2px solid var(--link);outline-offset:4px;border-radius:2px}
+.wechat-dialog{width:min(360px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:20px;border:0;border-radius:8px;box-shadow:0 16px 64px #0003;color:var(--ink);text-align:center;overflow:auto}
+.wechat-dialog::backdrop{background:rgb(0 0 0 / .45)}
+.wechat-dialog h2{font-size:20px;margin:0 0 8px}
+.wechat-dialog img{display:block;width:280px;max-width:100%;height:auto;margin:0 auto}
+.wechat-dialog p{font-size:14px;color:var(--muted);margin:12px 0 0}
+.wechat-close{position:absolute;top:6px;right:8px;width:32px;height:32px;padding:0;border:0;background:none;font:24px/1 Lato,sans-serif;color:var(--muted);cursor:pointer}
+.wechat-close:hover{color:var(--ink)}
 .portrait{width:260px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:#eee}
 .portrait img{display:block;width:100%;height:100%;object-fit:cover}
 h2{font-size:24px;line-height:1.3;font-weight:400;margin:0 0 14px}
