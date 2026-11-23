@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- Adapted from Jon Barron's academic website: https://github.com/jonbarron/jonbarron.github.io -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -11,7 +10,7 @@
   <link rel="shortcut icon" href="favicon.ico?v=sjtu-20261016">
   <link rel="icon" href="assets/favicon-sjtu-16.png?v=sjtu-20261016" type="image/png" sizes="16x16">
   <link rel="icon" href="assets/favicon-sjtu-32.png?v=sjtu-20261016" type="image/png" sizes="32x32">
-  <link rel="stylesheet" href="stylesheet.css?v=wechat-20261104">
+  <link rel="stylesheet" href="stylesheet.css?v=serif-20261123">
 </head>
 <body>
   <a class="skip-link" href="#research">Skip to research</a>
@@ -22,64 +21,83 @@
         <p>I'm an M.S. student in Mechanical Engineering at <a href="https://en.sjtu.edu.cn/">Shanghai Jiao Tong University</a>, where I also received my bachelor's degree. I'm currently a research intern at TeleAI, working with Dr. <a href="https://baichenjia.cn/">Chenjia Bai</a>.</p>
         <p>I aim to build general-purpose intelligence that learns and acts in the physical world. Toward this goal, my research focuses on scaling physical experience through simulation, grounded by real-world interaction. I explore how hardware, simulation, and learning can be co-designed so that physical knowledge accumulates and transfers across tasks, environments, and embodiments.</p>
         <nav class="contact" aria-label="Contact and profiles">
-          <a href="mailto:jason-w@sjtu.edu.cn">Email</a><span aria-hidden="true">/</span>
-          <a href="https://scholar.google.com/citations?user=RrZ_vZIAAAAJ">Scholar</a><span aria-hidden="true">/</span>
-          <a href="https://github.com/jason-wjs">GitHub</a><span aria-hidden="true">/</span>
-          <a href="https://x.com/wujered">X</a><span aria-hidden="true">/</span>
-          <button type="button" id="wechat-open" aria-haspopup="dialog" aria-controls="wechat-dialog">WeChat</button>
+          <a href="mailto:jason-w@sjtu.edu.cn">Email</a>
+          <a href="https://scholar.google.com/citations?user=RrZ_vZIAAAAJ">Scholar</a>
+          <a href="https://github.com/jason-wjs">GitHub</a>
+          <a href="https://x.com/wujered">X</a>
+          <button type="button" class="link-button" id="wechat-open" aria-haspopup="dialog" aria-controls="wechat-dialog">WeChat</button>
         </nav>
       </div>
       <div class="portrait"><img src="assets/portrait-unified.jpg" alt="Junsong Wu in graduation attire, with his hands and graduation cap visible" width="1200" height="1200" fetchpriority="high"></div>
     </header>
 
     <section id="research" aria-labelledby="research-heading">
-      <h2 id="research-heading">Research</h2>
-      <p class="research-intro"><sup>*</sup> Equal contribution &nbsp; <sup>†</sup> Corresponding author</p>
+      <div class="section-head">
+        <h2 id="research-heading">Research</h2>
+        <p class="section-note"><sup>*</sup> Equal contribution &nbsp; <sup>†</sup> Corresponding author</p>
+      </div>
       <div class="papers">
         <article class="paper">
-          <video class="paper-media" src="assets/papers/ttc.mp4" poster="assets/papers/ttc-poster.jpg" width="640" height="304" loop muted playsinline preload="none" aria-label="Test-time command optimization: sampled commands are rolled out in parallel through a fixed behavior foundation model, scored against the reference, and the best command is executed before replanning"></video>
+          <a class="paper-media-link" href="https://bfmttc.github.io" aria-label="Open Test-Time Compute for Humanoid Behavior Foundation Models project page">
+            <video class="paper-media" src="assets/papers/ttc.mp4" poster="assets/papers/ttc-poster.jpg" width="640" height="304" loop muted playsinline preload="none" aria-label="Test-time command optimization: sampled commands are rolled out in parallel through a fixed behavior foundation model, scored against the reference, and the best command is executed before replanning"></video>
+          </a>
           <div class="paper-copy">
             <h3><a href="https://bfmttc.github.io">Test-Time Compute for Humanoid Behavior Foundation Models</a></h3>
             <p class="authors"><a href="https://shi-soul.github.io/">Weiji Xie</a><sup>*</sup>, <strong>Junsong Wu</strong><sup>*</sup>, Zibo Zhou, Yueru Chen, <a href="https://scholar.google.com/citations?user=w7dfT-gAAAAJ">Xingyi Wang</a>, <a href="https://ieeexplore.ieee.org/author/37278485900">Zhenhua Xiong</a>, <a href="https://wnzhang.net/">Weinan Zhang</a>, <a href="https://baichenjia.cn/">Chenjia Bai</a><sup>†</sup></p>
-            <p class="venue">Under review</p>
-            <div class="resources"><a href="https://bfmttc.github.io">project page</a><i>/</i><a href="https://arxiv.org/abs/2610.14896">arXiv</a><i>/</i><a href="https://github.com/Gamma-Robot/bfm_ttc">code</a></div>
+            <div class="meta"><span class="status">Under review</span><a href="https://bfmttc.github.io">project page</a><a href="https://arxiv.org/abs/2610.14896">arXiv</a><a href="https://github.com/Gamma-Robot/bfm_ttc">code</a></div>
             <p class="tldr"><strong>TL;DR</strong> Test-time command optimization adjusts the inputs of a frozen humanoid behavior foundation model so the executed motion stays closer to the desired one, without retraining.</p>
           </div>
         </article>
         <article class="paper">
-          <video class="paper-media" src="assets/papers/koda.mp4" poster="assets/papers/koda-poster.jpg" width="640" height="360" loop muted playsinline preload="none" aria-label="KODA: a human egocentric demonstration of putting a cup into a drawer is converted into aligned humanoid motion and robot views, then the real humanoid performs the same task"></video>
+          <a class="paper-media-link" href="https://koda-humanoid.github.io/koda" aria-label="Open KODA project page">
+            <video class="paper-media" src="assets/papers/koda.mp4" poster="assets/papers/koda-poster.jpg" width="640" height="360" loop muted playsinline preload="none" aria-label="KODA: a human egocentric demonstration of putting a cup into a drawer is converted into aligned humanoid motion and robot views, then the real humanoid performs the same task"></video>
+          </a>
           <div class="paper-copy">
             <h3><a href="https://koda-humanoid.github.io/koda">KODA: Kinematics-Observation Data Alignment for Humanoid Learning from Human Egocentric Demonstration</a></h3>
             <p class="authors">Zibo Zhou<sup>*</sup>, Yueru Chen<sup>*</sup>, <strong>Junsong Wu</strong>, <a href="https://shi-soul.github.io/">Weiji Xie</a>, Qingyao Xu, Sheng Yin, Shiqing Wang, <a href="https://scholar.google.com/citations?user=aVte5j4AAAAJ">Jiyuan Shi</a>, <a href="https://siheng-chen.github.io/">Siheng Chen</a>, <a href="https://baichenjia.cn/">Chenjia Bai</a><sup>†</sup>, <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ">Xuelong Li</a><sup>†</sup></p>
-            <p class="venue">Under review</p>
-            <div class="resources"><a href="https://koda-humanoid.github.io/koda">project page</a><i>/</i><a href="https://arxiv.org/abs/2610.21152">arXiv</a><i>/</i><a href="https://github.com/Gamma-Robot/KODA">code</a></div>
+            <div class="meta"><span class="status">Under review</span><a href="https://koda-humanoid.github.io/koda">project page</a><a href="https://arxiv.org/abs/2610.21152">arXiv</a><a href="https://github.com/Gamma-Robot/KODA">code</a></div>
             <p class="tldr"><strong>TL;DR</strong> KODA aligns human egocentric demonstrations with a humanoid's kinematics and observations, so those demonstrations can be used for learning.</p>
           </div>
         </article>
         <article class="paper">
-          <video class="paper-media" src="assets/papers/nexus.mp4" poster="assets/papers/nexus-poster.jpg" width="576" height="432" loop muted playsinline preload="none" aria-label="NEXUS: an operator moves and squats on flat ground while the humanoid steps and balances on a raised stair platform"></video>
+          <a class="paper-media-link" href="https://nexus-humanoid.github.io/" aria-label="Open NEXUS project page">
+            <video class="paper-media" src="assets/papers/nexus.mp4" poster="assets/papers/nexus-poster.jpg" width="576" height="432" loop muted playsinline preload="none" aria-label="NEXUS: an operator moves and squats on flat ground while the humanoid steps and balances on a raised stair platform"></video>
+          </a>
           <div class="paper-copy">
             <h3><a href="https://nexus-humanoid.github.io/">NEXUS: Perceptive Whole-Body Control for Terrain-Adaptive Teleoperation</a></h3>
             <p class="authors"><a href="https://xiangyumiao.pages.dev/">Xiangyu Miao</a>, <strong>Junsong Wu</strong>, <a href="https://scholar.google.com/citations?user=aVte5j4AAAAJ">Jiyuan Shi</a>, <a href="https://shi-soul.github.io/">Weiji Xie</a>, <a href="https://bwrooney82.github.io/">Jinrui Han</a>, <a href="https://scholar.google.com/citations?user=w7dfT-gAAAAJ">Xingyi Wang</a>, <a href="https://wnzhang.net/">Weinan Zhang</a><sup>†</sup>, <a href="https://baichenjia.cn/">Chenjia Bai</a><sup>†</sup>, <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ">Xuelong Li</a></p>
-            <p class="venue">Under review</p>
-            <div class="resources"><a href="https://nexus-humanoid.github.io/">project page</a><i>/</i><a href="https://arxiv.org/abs/2609.39000">arXiv</a><i>/</i><a href="https://github.com/Gamma-Robot/NEXUS">code</a></div>
+            <div class="meta"><span class="status">Under review</span><a href="https://nexus-humanoid.github.io/">project page</a><a href="https://arxiv.org/abs/2609.39000">arXiv</a><a href="https://github.com/Gamma-Robot/NEXUS">code</a></div>
             <p class="tldr"><strong>TL;DR</strong> NEXUS turns flat-ground motions into terrain-consistent references and trains a perceptive whole-body controller for teleoperation across different terrains.</p>
           </div>
         </article>
         <article class="paper">
-          <video class="paper-media" src="assets/papers/clot.mp4" poster="assets/papers/clot-poster.jpg" width="640" height="360" loop muted playsinline preload="none" aria-label="CLOT: a teleoperated humanoid picks up a bucket from the ground, carries it alongside the operator, and places it on a table"></video>
+          <a class="paper-media-link" href="https://mwondering.github.io/echo-bfm/" aria-label="Open ECHO project page">
+            <video class="paper-media" src="assets/papers/echo.mp4" poster="assets/papers/echo-poster.jpg" width="640" height="360" loop muted playsinline preload="none" aria-label="ECHO: a humanoid performs a side flip off a platform, then adapts in context as a weighted basket is hung on and removed from its outstretched arm"></video>
+          </a>
+          <div class="paper-copy">
+            <h3><a href="https://mwondering.github.io/echo-bfm/">ECHO: In-Context Behavior Foundation Model for Humanoid Whole-Body Control</a></h3>
+            <p class="authors"><a href="https://scholar.google.com/citations?user=w7dfT-gAAAAJ">Xingyi Wang</a><sup>*</sup>, Bin Li<sup>*</sup>, <a href="https://scholar.google.com/citations?user=aVte5j4AAAAJ">Jiyuan Shi</a>, Chenyun Zhang, <a href="https://shi-soul.github.io/">Weiji Xie</a>, <a href="https://xiangyumiao.pages.dev/">Xiangyu Miao</a>, <strong>Junsong Wu</strong>, Wei Song, Shiqiang Zhu<sup>†</sup>, <a href="https://baichenjia.cn/">Chenjia Bai</a><sup>†</sup></p>
+            <div class="meta"><span class="status">Under review</span><a href="https://mwondering.github.io/echo-bfm/">project page</a><a href="https://arxiv.org/abs/2611.25778">arXiv</a></div>
+            <p class="tldr"><strong>TL;DR</strong> ECHO pairs a general humanoid behavior prior with in-context adaptation from interaction history, handling both agile motions and changing dynamics without updating weights.</p>
+          </div>
+        </article>
+        <article class="paper">
+          <a class="paper-media-link" href="https://zhutengjie.github.io/CLOT.github.io/" aria-label="Open CLOT project page">
+            <video class="paper-media" src="assets/papers/clot.mp4" poster="assets/papers/clot-poster.jpg" width="640" height="360" loop muted playsinline preload="none" aria-label="CLOT: a teleoperated humanoid picks up a bucket from the ground, carries it alongside the operator, and places it on a table"></video>
+          </a>
           <div class="paper-copy">
             <h3><a href="https://zhutengjie.github.io/CLOT.github.io/">CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation</a></h3>
             <p class="authors">Tengjie Zhu<sup>*</sup>, Guanyu Cai<sup>*</sup>, Zhaohui Yang<sup>*</sup>, Guanzhu Ren, Haohui Xie, <strong>Junsong Wu</strong>, ZiRui Wang, Jingbo Wang, <a href="https://dzb.seiee.sjtu.edu.cn/english/detail/842_802.htm">Xiaokang Yang</a>, <a href="https://yaomarkmu.github.io/">Yao Mu</a><sup>†</sup>, <a href="https://daodaofr.github.io/">Yichao Yan</a><sup>†</sup></p>
-            <p class="venue">Under review</p>
-            <div class="resources"><a href="https://zhutengjie.github.io/CLOT.github.io/">project page</a><i>/</i><a href="https://arxiv.org/abs/2602.15060">arXiv</a><i>/</i><a href="https://github.com/zhutengjie/CLOT">code</a></div>
+            <div class="meta"><span class="status">Under review</span><a href="https://zhutengjie.github.io/CLOT.github.io/">project page</a><a href="https://arxiv.org/abs/2602.15060">arXiv</a><a href="https://github.com/zhutengjie/CLOT">code</a></div>
             <p class="tldr"><strong>TL;DR</strong> CLOT closes the loop on whole-body humanoid teleoperation, correcting global position and heading during long-horizon tracking.</p>
           </div>
         </article>
       </div>
     </section>
     <section class="beyond" aria-labelledby="beyond-heading">
-      <h2 id="beyond-heading">Miscellaneous</h2>
+      <div class="section-head">
+        <h2 id="beyond-heading">Miscellaneous</h2>
+      </div>
       <p>Beyond research, music has long been a big part of my life. I have spent countless hours somewhere between rehearsals and the stage, playing guitar with my bands. Alongside my engineering education, I studied French and developed a lasting interest in languages and the humanities, especially literature, philosophy, and history.</p>
       <details class="music-photos">
         <summary>A few moments on stage</summary>
@@ -127,7 +145,6 @@
       <blockquote><p>Wealthy with all you’ve gained on the way.</p></blockquote>
       <figcaption>— C. P. Cavafy, <cite>Ithaka</cite></figcaption>
     </figure>
-    <footer>Website adapted from <a href="https://jonbarron.info/">Jon Barron</a>'s <a href="https://github.com/jonbarron/jonbarron.github.io">template</a>.</footer>
   </main>
   <dialog class="wechat-dialog" id="wechat-dialog" aria-labelledby="wechat-title">
     <button type="button" class="wechat-close" id="wechat-close" aria-label="Close WeChat QR code" autofocus>×</button>

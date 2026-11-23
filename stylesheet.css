@@ -1,64 +1,89 @@
-/* Typography, link palette, and research-row layout adapted from Jon Barron. */
-@font-face{font-family:Lato;src:url('assets/fonts/lato-regular.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
-@font-face{font-family:Lato;src:url('assets/fonts/lato-bold.woff2') format('woff2');font-style:normal;font-weight:700;font-display:swap}
-:root{color-scheme:light;--ink:#242424;--link:#1772d0;--muted:#686868}
+@font-face{font-family:'Source Serif 4';src:url('assets/fonts/source-serif-4-400-normal.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'Source Serif 4';src:url('assets/fonts/source-serif-4-400-italic.woff2') format('woff2');font-style:italic;font-weight:400;font-display:swap}
+@font-face{font-family:'Source Serif 4';src:url('assets/fonts/source-serif-4-600-normal.woff2') format('woff2');font-style:normal;font-weight:600;font-display:swap}
+:root{color-scheme:light;--ink:#1c1c1c;--ink-2:#4b4b4b;--muted:#767676;--rule:#e2e2e2;--tint:#f2f2f0;--link:#006699;--serif:'Source Serif 4',Georgia,'Songti SC','Noto Serif CJK SC',serif;--cjk:'Songti SC','Noto Serif CJK SC',serif}
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:var(--ink);font-family:Lato,Verdana,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5}
-main{max-width:940px;padding:0 28px;margin:0 auto}
-a{color:var(--link);text-decoration:none}
-a:hover{color:#af5c00}
-a:focus-visible{outline:2px solid var(--link);outline-offset:4px;border-radius:2px}
-p{margin:0 0 14px}
-.intro{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:44px;align-items:center;padding:54px 0 48px}
-h1{font-size:32px;line-height:1.3;font-weight:400;text-align:center;margin:0 0 24px}
-h1 span{display:inline-block;font-family:'Songti SC','Noto Serif CJK SC',serif;font-size:24px;margin-left:8px}
-.placeholder{color:var(--muted)}
-.contact{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:5px 9px;margin-top:20px;font-size:15px}
-.contact>span{color:#919191}
-.contact button{padding:0;border:0;background:none;color:var(--link);font:inherit;cursor:pointer}
-.contact button:hover{color:#af5c00}
-.contact button:focus-visible,.wechat-close:focus-visible{outline:2px solid var(--link);outline-offset:4px;border-radius:2px}
-.wechat-dialog{width:min(360px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:20px;border:0;border-radius:8px;box-shadow:0 16px 64px #0003;color:var(--ink);text-align:center;overflow:auto}
-.wechat-dialog::backdrop{background:rgb(0 0 0 / .45)}
-.wechat-dialog h2{font-size:20px;margin:0 0 8px}
-.wechat-dialog img{display:block;width:280px;max-width:100%;height:auto;margin:0 auto}
-.wechat-dialog p{font-size:14px;color:var(--muted);margin:12px 0 0}
-.wechat-close{position:absolute;top:6px;right:8px;width:32px;height:32px;padding:0;border:0;background:none;font:24px/1 Lato,sans-serif;color:var(--muted);cursor:pointer}
-.wechat-close:hover{color:var(--ink)}
-.portrait{width:260px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:#eee}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+main{max-width:920px;margin:0 auto;padding:0 28px}
+a,.link-button{color:var(--link);text-decoration:none;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover,.link-button:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--link);outline-offset:3px;border-radius:2px}
+.link-button{padding:0;border:0;background:none;font:inherit;cursor:pointer}
+p{margin:0 0 12px}
+strong{font-weight:600}
+
+.intro{display:grid;grid-template-columns:minmax(0,1fr) 250px;column-gap:48px;padding:72px 0 0}
+h1{margin:0 0 20px;font-size:34px;line-height:1.2;font-weight:600;letter-spacing:-.012em}
+h1 span{margin-left:.35em;font-family:var(--cjk);font-size:.7em;font-weight:400;letter-spacing:0;color:var(--ink-2)}
+.portrait{border-radius:6px;overflow:hidden;background:var(--tint)}
 .portrait img{display:block;width:100%;height:100%;object-fit:cover}
-h2{font-size:24px;line-height:1.3;font-weight:400;margin:0 0 14px}
-.research-intro{margin-bottom:30px;max-width:830px}
-.papers{display:grid;gap:36px}
-.paper{display:grid;grid-template-columns:210px minmax(0,1fr);gap:28px;align-items:center}
-.paper-media{display:block;width:100%;height:auto}
-h3{font-size:16px;line-height:1.4;font-weight:700;margin:0 0 6px;color:var(--ink)}
-.authors,.venue{font-size:14px;line-height:1.5;margin:0}
-.venue{font-style:italic}
-.resources{display:flex;flex-wrap:wrap;gap:4px 7px;font-size:14px;margin:2px 0 10px}
-.resources span{color:#747474}
-.resources i{color:#aaa;font-style:normal}
-.tldr{font-size:15px;line-height:1.5;margin:0}
-.beyond{margin-top:54px}
-.beyond p{max-width:830px}
-.music-photos{max-width:830px;margin-top:12px}
+.contact{display:flex;flex-wrap:wrap;gap:4px 22px;margin-top:20px;font-weight:600}
+
+section{margin-top:60px}
+.section-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 24px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+h2{margin:0;font-size:21px;line-height:1.3;font-weight:600}
+.section-note{margin:0;font-size:14px;color:var(--muted)}
+
+.paper{display:grid;grid-template-columns:216px minmax(0,1fr);column-gap:28px;align-items:start;padding-top:30px}
+.paper-media-link{display:block;border-radius:6px;text-decoration:none}
+.paper-media{display:block;width:100%;height:auto;border:1px solid rgb(0 0 0 / .07);border-radius:6px;background:var(--tint)}
+h3{margin:0;font-size:17px;line-height:1.4;font-weight:600}
+h3 a{color:var(--ink)}
+.authors{margin:5px 0 0;font-size:15px;line-height:1.5;color:var(--ink-2)}
+.authors strong{color:var(--ink)}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 16px;margin-top:9px;font-size:15px}
+.meta span{color:var(--muted)}
+.meta .status{padding:0 8px;border-radius:4px;background:var(--tint);color:var(--ink-2);font-size:13px;line-height:1.75}
+.tldr{margin:9px 0 0;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.tldr strong{color:var(--ink)}
+
+.beyond .section-head{margin-bottom:20px}
+.beyond p,.music-photos{max-width:780px}
 .music-photos summary{width:fit-content;color:var(--link);cursor:pointer}
-.music-photos summary:hover{color:#af5c00}
-.music-photos summary:focus-visible{outline:2px solid var(--link);outline-offset:4px;border-radius:2px}
-.music-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 16px;margin-top:18px}
+.music-photos summary:hover{text-decoration:underline}
+.music-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 16px;margin-top:18px}
 .music-gallery figure{margin:0;min-width:0}
 .music-gallery figure>a{display:block}
-.music-gallery img{display:block;width:100%;height:auto;aspect-ratio:5/3;object-fit:cover}
+.music-gallery img{display:block;width:100%;height:auto;aspect-ratio:5/3;object-fit:cover;border-radius:4px}
 .music-gallery .music-photo-portrait{object-position:50% 58%}
-.music-gallery figcaption{margin-top:6px;font-size:14px;color:var(--muted)}
-.epigraph{margin:54px 0 0;text-align:right;color:#8a8a8a;font-size:14px;line-height:1.5}
+.music-gallery figcaption{margin-top:6px;font-size:14px;line-height:1.5;color:var(--muted)}
+
+.epigraph{margin:72px 0 0;padding-bottom:56px;text-align:right;font-size:15px;line-height:1.5;color:var(--muted)}
+.epigraph blockquote{margin:0}
 .epigraph p{margin:0;font-style:italic}
 .epigraph figcaption{margin-top:4px}
 .epigraph cite{font-style:normal}
-footer{text-align:right;margin:14px 0 28px;color:#747474;font-size:13px}
-.skip-link{position:absolute;top:-100px;left:16px;padding:8px 14px;background:white;z-index:2}
+
+.wechat-dialog{width:min(360px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:22px;border:0;border-radius:8px;box-shadow:0 18px 60px rgb(0 0 0 / .22);color:var(--ink);text-align:center;overflow:auto}
+.wechat-dialog::backdrop{background:rgb(0 0 0 / .45)}
+.wechat-dialog h2{margin:0 0 10px;font-size:20px}
+.wechat-dialog img{display:block;width:280px;max-width:100%;height:auto;margin:0 auto}
+.wechat-dialog p{margin:12px 0 0;font-size:14px;color:var(--muted)}
+.wechat-close{position:absolute;top:6px;right:8px;width:32px;height:32px;padding:0;border:0;background:none;font:24px/1 var(--serif);color:var(--muted);cursor:pointer}
+.wechat-close:hover{color:var(--ink)}
+
+.skip-link{position:absolute;top:-100px;left:16px;z-index:2;padding:8px 14px;background:#fff}
 .skip-link:focus{top:10px}
-@media(max-width:760px){main{padding:0 24px}.intro{grid-template-columns:minmax(0,1fr) 210px;gap:28px;padding-top:36px}.portrait{width:210px}h1{font-size:29px}h1 span{font-size:22px}.paper{grid-template-columns:180px minmax(0,1fr);gap:22px}}
-@media(max-width:600px){main{padding:0 22px}.intro{grid-template-columns:1fr;gap:26px;padding:30px 0 40px}.portrait{grid-row:1;justify-self:center;width:210px}h1{margin-bottom:20px}.paper{grid-template-columns:1fr;gap:16px}.paper-media{max-width:320px}.papers{gap:34px}.research-intro{margin-bottom:26px}.contact{gap:8px 10px}.beyond{margin-top:40px}.epigraph{margin-top:40px;text-align:left}footer{text-align:left;margin-top:14px}h3{font-size:17px}}
-@media(max-width:760px){.music-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:480px){.music-gallery{grid-template-columns:1fr}}
+
+@media(max-width:760px){
+  main{padding:0 24px}
+  .intro{grid-template-columns:minmax(0,1fr) 200px;column-gap:32px;align-items:center;padding-top:52px}
+  .portrait{aspect-ratio:4/5}
+  h1{font-size:30px}
+  .paper{grid-template-columns:180px minmax(0,1fr);column-gap:22px}
+  .music-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  main{padding:0 22px}
+  .intro{grid-template-columns:1fr;padding-top:36px}
+  .portrait{grid-row:1;width:132px;margin:0 0 24px;aspect-ratio:1}
+  h1 span{display:block;margin:4px 0 0;font-size:.68em}
+  section{margin-top:48px}
+  .paper{grid-template-columns:1fr;row-gap:14px;padding-top:30px}
+  .paper-media-link{max-width:440px}
+  .paper-media{max-width:440px}
+  .epigraph{margin-top:56px;padding-bottom:44px;text-align:left}
+}
+@media(max-width:480px){
+  .music-gallery{grid-template-columns:1fr}
+}
